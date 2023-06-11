@@ -504,37 +504,57 @@
                     <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
                         
 <div class="statis">
-    <span class="count"><a href="/">2</a></span>
+    <span class="count"><a href="/">1</a></span>
     <span class="name">文章</span>
 </div>
 
 
 
+<div class="statis">
+    <span class="count"><a href="/categories">1</a></span>
+    <span class="name">分类</span>
+</div>
 
+
+
+<div class="statis">
+    <span class="count"><a href="/tags">1</a></span>
+    <span class="name">标签</span>
+</div>
 
 
                     </div>
                     <div class="col s12 m12 l4">
                         <div class="profile center-align">
                             <div class="avatar">
-                                <img src="/medias/avatar.jpg" alt="Yong Zhao"
+                                <img src="/medias/avatar.jpg" alt="zhypc"
                                      class="circle responsive-img avatar-img">
                             </div>
                             <div class="author">
                                 <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
                                     
 <div class="statis">
-    <span class="count"><a href="/">2</a></span>
+    <span class="count"><a href="/">1</a></span>
     <span class="name">文章</span>
 </div>
 
 
 
+<div class="statis">
+    <span class="count"><a href="/categories">1</a></span>
+    <span class="name">分类</span>
+</div>
 
+
+
+<div class="statis">
+    <span class="count"><a href="/tags">1</a></span>
+    <span class="name">标签</span>
+</div>
 
 
                                 </div>
-                                <div class="title">Yong Zhao</div>
+                                <div class="title">zhypc</div>
                                 <div class="career">Bioinformatics  Engineer</div>
                                 <div class="social-link hide-on-large-only" data-aos="zoom-in-left">
                                     
@@ -662,7 +682,7 @@
         },
         xAxis: {
             type: 'category',
-            data: ["2022-04","2022-05","2022-06","2022-07","2022-08","2022-09","2022-10","2022-11","2022-12","2023-01","2023-02","2023-03","2023-04"]
+            data: ["2022-06","2022-07","2022-08","2022-09","2022-10","2022-11","2022-12","2023-01","2023-02","2023-03","2023-04","2023-05","2023-06"]
         },
         yAxis: {
             type: 'value',
@@ -672,7 +692,7 @@
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,0,0,0,0,0,2],
+                data: [0,0,0,0,0,0,0,0,0,0,1,0,0],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -714,7 +734,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [],
+                data: [{"name":"test","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -738,7 +758,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: []
+                data: ["test"]
             }
         ],
         yAxis: [
@@ -751,7 +771,7 @@
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [],
+                data: [1],
                 markPoint: {
                     symbolSize: 45,
                     data: [{
@@ -920,6 +940,12 @@
         <div class="sub-title center-align"><i class="fa fa-book"></i>&nbsp;&nbsp;其他技能</div>
         <div class="tag-chips center-align">
             
+            
+            <a href="/tags/test/">
+                <span class="chip center-align waves-effect waves-light chip-default">test</span>
+            </a>
+            
+            
         </div>
     </div>
     
@@ -1044,14 +1070,16 @@
             
                 <span id="year">2023</span>
             
-            <a href="/about" target="_blank">Yong Zhao</a>
+            <a href="/about" target="_blank">zhypc</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+                <span id="translate">|&nbsp;繁/简：</span><a id="translateLink" href="javascript:translatePage();">繁</a>
             
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">73</span>
+                        class="white-color">8</span>
             
             
             
@@ -1313,6 +1341,17 @@ $(function () {
 
     
 
+    
+        <script type="text/javascript" src="/js/tw_cn.js"></script>
+        <script type="text/javascript">
+          var defaultEncoding = 2; //网站编写字体是否繁体，1-繁体，2-简体
+          var translateDelay = 0; //延迟时间,若不在前, 要设定延迟翻译时间, 如100表示100ms,默认为0
+          var cookieDomain = "https://zhypc.github.io"; //Cookie地址, 一定要设定, 通常为你的网址
+          var msgToTraditionalChinese = "繁"; //此处可以更改为你想要显示的文字
+          var msgToSimplifiedChinese = "简"; //同上，但两处均不建议更改
+          var translateButtonId = "translateLink"; //默认互换id
+          translateInitilization();
+        </script>
     
     
     
